@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Start Screen -->
+    <div class="start-screen">
+      <button class="theme-toggle">🌙</button>
+      <h1 class="heading">Quiz App</h1>
+      <div class="settings">
+        <label for="num-questions">Number of Questions</label>
+        <select id="num-questions">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+
+        <label for="category">Select Category</label>
+        <select id="category">
+          <option value="">Any Category</option>
+          <option value="9">General Knowledge</option>
+          <option value="17">Science & Nature</option>
+          <option value="18">Computers</option>
+          <option value="19">Mathematics</option>
+          <option value="21">Sports</option>
+          <option value="22">Geography</option>
+          <option value="23">History</option>
+          <option value="24">Politics</option>
+          <option value="27">Animals</option>
+          <option value="28">Vehicles</option>
+        </select>
+
+        <label for="difficulty">Select Difficulty</label>
+        <select id="difficulty">
+          <option value="">Any Difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <label for="time">Select Time Per Question</label>
+        <select id="time">
+          <option value="10">10 Seconds</option>
+          <option value="15">15 Seconds</option>
+          <option value="20">20 Seconds</option>
+          <option value="30">30 Seconds</option>
+        </select>
+      </div>
+      <button class="btn start">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div class="quiz hide">
+      <button class="theme-toggle">🌙</button>
+      <div class="timer">
+        <div class="progress">
+          <div class="progress-bar"></div>
+          <span class="progress-text">0</span>
+        </div>
+      </div>
+      <div class="question-wrapper">
+        <div class="number">
+          Question <span class="current">1</span>
+          <span class="total">/10</span>
+        </div>
+        <div class="question">Loading...</div>
+        <div class="answer-wrapper"></div>
+      </div>
+      <button class="btn submit" disabled>Submit</button>
+    </div>
+
+    <!-- End Screen -->
+    <div class="end-screen hide">
+      <button class="theme-toggle">🌙</button>
+      <h1 class="heading">Quiz App</h1>
+      <div class="score">
+        <span class="score-text">Your Score</span>
+        <div>
+          <span class="final-score">0</span>
+          <span class="total-score">/10</span>
+        </div>
+        <div class="percentage">Percentage = 0%</div>
+      </div>
+      <button class="btn restart">Restart the Quiz</button>
+    </div>
+
+  </div>
+  <script src="project.js"></script>
+</body>
+</html>
